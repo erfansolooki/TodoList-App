@@ -1,38 +1,119 @@
+:root {
+    --main-color: #fff;
+    --secondary-color: #ccc;
+    --third-color: #6d28d9;
+    --completed-color: #ccc;
+    --main-space: 10px;
+    --first-space: 5px;
+    --secondary-space: 20px;
+    --third-space: 20rem;
+}
+
 .App {
-  text-align: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--main-space);
+    padding: var(--secondary-space);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+    margin-bottom: var(--secondary-space);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem;
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--first-space);
+    padding: var(--secondary-space);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--third-space);
+    margin-top: var(--secondary-space);
 }
 
-.App-link {
-  color: #61dafb;
+.todoText {
+    font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.completed {
+    text-decoration: line-through;
+    color: var(--completed-color);
+}
+
+input {
+    border: 1px solid #b5b1b1;
+    border-radius: var(--first-space);
+    outline: none;
+    padding: 0.5rem;
+    width: 200px;
+}
+
+input:focus {
+    border: 1.75px solid #b5b1b1;
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: var(--third-space);
+    margin-top: var(--secondary-space);
+}
+
+.btn {
+    background-color: var(--main-color);
+    border-radius: var(--first-space);
+    outline: none;
+    padding: var(--first-space) var(--main-space);
+    cursor: pointer;
+}
+
+.edit {
+    color: var(--third-color);
+    border: 1px solid var(--third-color);
+}
+
+.remove {
+    color: rgb(236, 68, 68);
+    border: 1px solid rgb(236, 68, 68);
+}
+
+.complete {
+    color: rgb(27 106 37 / 1);
+    border: 1px solid rgb(27 106 37 / 1);
+}
+
+.update {
+    padding: 0.5rem 1rem;
+    background-color: var(--third-color);
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.add {
+    color: var(--third-color);
+    border: 1px solid var(--third-color);
+    padding: 0.5rem 1rem;
+}
+
+.buttons {
+    display: flex;
+    width: 13rem;
+    justify-content: space-around;
+}
+
+.p {
+    margin-top: 1rem;
+    color: #858585;
 }
